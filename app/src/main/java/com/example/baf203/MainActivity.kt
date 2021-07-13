@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                 this,
                 Manifest.permission.READ_SMS
             ) == PackageManager.PERMISSION_GRANTED -> {
-
+                GetSms(this).getMessages()
             }
             else -> {
                 // You can directly ask for the permission.
