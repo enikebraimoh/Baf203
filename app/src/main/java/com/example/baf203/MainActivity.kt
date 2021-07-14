@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
                 this,
                 Manifest.permission.READ_SMS
             ) == PackageManager.PERMISSION_GRANTED -> {
+
                 GetSms(this).getMessages()
             }
             else -> {
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                             grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                     // Permission is granted. Continue the action or workflow
                     // in your app.
-                    GetSms(applicationContext)
+                    GetSms(applicationContext).getMessages()
                 } else {
                     // Explain to the user that the feature is unavailable because
                     // the features requires a permission that the user has denied.
